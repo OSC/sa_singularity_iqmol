@@ -1,6 +1,10 @@
 BootStrap: docker
 From: centos:7
 
+%labels
+    Maintainer zyou@osc.edu
+    Recipe https://github.com/OSC/sa_singularity_iqmol
+
 %post
     yum install -y \
         wget \
