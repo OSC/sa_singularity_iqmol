@@ -5,6 +5,15 @@ From: ubuntu:18.04
     Maintainer zyou@osc.edu
     Recipe https://github.com/OSC/sa_singularity_iqmol
 
+%environment
+    export QC=/opt/qchem
+    export QCAUX=$QC/qcaux
+    export QCPROG_S=$QC/exe/qcprog.exe_s
+    export QCMPI=mpich3
+    export QCRSH=ssh
+    export PATH=$PATH:$QC/exe:$QC/bin
+    export QCSCRATCH=$TMPDIR
+
 %post
     apt update
     apt upgrade -y
